@@ -463,7 +463,6 @@ nav {
     gap: 20px;
   }
 
-<<<<<<< HEAD
   .footer-col ul li a:hover{
     padding-left: 8px;
   }
@@ -545,8 +544,5 @@ nav {
       width: 100%;
       margin-bottom: 30px;
     }
->>>>>>> 71056a2 (Added company page)
-  }  
-=======
+  }
 }
->>>>>>> 9a96345 (updated css for company, alumni and faq)
