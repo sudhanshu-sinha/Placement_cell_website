@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact_US | Chandigarh University</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&family=Delicious+Handrawn&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kanit&family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tillana:wght@400;500;600;700;800&family=Work+Sans:ital,wght@0,500;0,600;1,500&display=swap"
+        rel="stylesheet">
+    <style>
+        .contact {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .contact_us {
+            padding: 20px;
+            background-color: rgba(97, 191, 249, 0.605);
+            border-radius: 5%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 850px;
+            height: 500px;
+        }
+
+        label {
+            margin-top: 10px;
+            display: block;
+            font-weight: 600;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        textarea {
+            min-height: 160px;
+        }
+
+        input[type="submit"] {
+            margin-top: 10px;
+            background-color: #e91e63;
+            border-radius:5px;
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: 500;
+            max-width: 120px;
+            padding: 10px;
+        }
+        input[type="submit"]:hover{
+            Background-color:rgba(127, 30, 172, 0.651);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/cu-logo-white.png" alt="logo"></img>
+                </a>
+            </div>
+            <div>
+                <ul id="navbar">
+                    <li>
+                        <a href="/index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Alumni.html">
+                            Alumni
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Company.html">
+                            Company
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/faq.html">
+                            FAQ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Contact_Us.html">
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div id="mobile">
+                <i id="menu-icon" class="fas fa-bars"></i>
+            </div>
+        </nav>
+
+        <h1>Contact Us</h1>
+    </header>
+
+    <section class="contact">
+        <h1>Contact US</h1>
+        <div class="contact_us">
+            <form>
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" placeholder="Your Name">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" placeholder="Your Last Name">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Your Email ID">
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="Write Something......"></textarea>
+                <input type="submit">
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Placement Cell</h4>
+                    <ul>
+                        <li>
+                            <a href="/index.html">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Alumni.html">
+                                Alumni
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Company.html">
+                                Company
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/faq.html">
+                                FAQ
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Contact_Us.html">
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>About Us</h4>
+                    <p>Chandigarh University, Punjab [CU] is the Best University in Punjab and North India that offers
+                        various Undergraduate and Post graduate Courses like B.Tech, BCA, BBA, HMCT, B.Com, LLB, B.Arch,
+                        MBA, M.Tech, B.Com, M.Com, Journalism and MCA at an affordable fees in Chandigarh. Apply Now at
+                        India's Best Private University in Punjab, Chandigarh which provides top placements.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript code for handling the mobile menu toggle
+        document.addEventListener("DOMContentLoaded", function () {
+            const mobileButton = document.getElementById("mobile");
+            const navbar = document.getElementById("navbar");
+            const menuIcon = document.getElementById("menu-icon");
+
+            mobileButton.addEventListener("click", function () {
+                navbar.classList.toggle("active");
+                menuIcon.classList.toggle("fa-bars");
+                menuIcon.classList.toggle("fa-times");
+            });
+        });
+
+        const currentPage = window.location.pathname;
+
+        document.querySelectorAll('#navbar a').forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+                link.classList.add('active');
+            }
+        });
+    </script>
+</body>
+
+</html>
