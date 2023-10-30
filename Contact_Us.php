@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact_US | Chandigarh University</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -64,53 +64,15 @@
         input[type="submit"]:hover{
             Background-color:rgba(127, 30, 172, 0.651);
         }
+
+        <?php require 'partials/login_style.php' ?>
     </style>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="index.html">
-                    <img src="img/cu-logo-white.png" alt="logo"></img>
-                </a>
-            </div>
-            <div>
-                <ul id="navbar">
-                    <li>
-                        <a href="/index.html">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/Alumni.html">
-                            Alumni
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/Company.html">
-                            Company
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/faq.html">
-                            FAQ
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/Contact_Us.html">
-                            Contact Us
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div id="mobile">
-                <i id="menu-icon" class="fas fa-bars"></i>
-            </div>
-        </nav>
-
-        <h1>Contact Us</h1>
-    </header>
+    <?php require 'partials/nav.php' ?>
+    <!-- login popup -->
+    <?php require 'partials/login.php' ?>
 
     <section class="contact">
         <h1>Contact US</h1>
@@ -129,58 +91,8 @@
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="footer-col">
-                    <h4>Placement Cell</h4>
-                    <ul>
-                        <li>
-                            <a href="/index.html">
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/Alumni.html">
-                                Alumni
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/Company.html">
-                                Company
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/faq.html">
-                                FAQ
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/Contact_Us.html">
-                                Contact Us
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>follow us</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h4>About Us</h4>
-                    <p>Chandigarh University, Punjab [CU] is the Best University in Punjab and North India that offers
-                        various Undergraduate and Post graduate Courses like B.Tech, BCA, BBA, HMCT, B.Com, LLB, B.Arch,
-                        MBA, M.Tech, B.Com, M.Com, Journalism and MCA at an affordable fees in Chandigarh. Apply Now at
-                        India's Best Private University in Punjab, Chandigarh which provides top placements.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+    
+    <?php require 'partials/footer.php' ?>
 
     <script>
         // JavaScript code for handling the mobile menu toggle
@@ -196,13 +108,33 @@
             });
         });
 
-        const currentPage = window.location.pathname;
+        var currentPage = window.location.href;
+        var links = document.querySelectorAll("nav ul li a");
 
-        document.querySelectorAll('#navbar a').forEach(link => {
-            if (link.getAttribute('href') === currentPage) {
-                link.classList.add('active');
+        for (var i=0;i<links.length;i++)
+        {
+            if (links[i].href === currentPage) {
+                links[i].classList.add('active');
             }
-        });
+        }
+
+        const loginButton = document.getElementById("loginButton");
+            const loginPopup = document.getElementById("loginPopup");
+            const closeButton = document.getElementById("closeButton");
+
+            loginButton.addEventListener("click", () => {
+                loginPopup.style.display = "block";
+            });
+
+            closeButton.addEventListener("click", () => {
+                loginPopup.style.display = "none";
+            });
+
+            window.addEventListener("click", (event) => {
+                if (event.target == loginPopup) {
+                    loginPopup.style.display = "none";
+                }
+            });
     </script>
 </body>
 
