@@ -1,4 +1,4 @@
-<div class="sidebar open">
+<div class="sidebar">
         <div class="logo-details">
             <img src="img/chandigarh-university-logo-cu_freelogovectors.net_-250x400.webp" class="icon">
             <div class="logo_name">CHANDIGARH UNIVERSITY</div>
@@ -40,7 +40,7 @@
             </li>
             <li class="profile">
                 <div class="profile-details">
-                    <img src="img/student_images/<?php echo $image_filename; ?>" alt="profileImg">
+                    <img src="<?php echo $image_filename; ?>" alt="profileImg">
                     <div class="name_job">
                         <div class="name"><?php echo $firstName; ?></div>
                         <div class="job"><?php echo $uid; ?></div>

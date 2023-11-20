@@ -1,8 +1,10 @@
 <div id="Popup" class="popup">
-    <div class="add_comp">
+    <div class="form_wrapper">
         <span class="close" id="closeButton">&times;</span>
-            <h2>Add Upcoming Company</h2>
+            <h2><center>Add Upcoming Company</center></h2>
             <form action="Add_comp.php" method="post" class="form">
+                <div class="form_row">
+                    <div class="form_column">
                 <div class="form-control">
                     <input type="text" name="company_name" required>
                     <label>Company Name</label>
@@ -23,6 +25,12 @@
                     <input type="date" name="last_date" required>
                     <label>Last Date</label>
                 </div>
+                </div>
+                <div class="form_column">
+                <div class="form-control">
+                    <input type="text" name="location" required>
+                    <label>Location</label>
+                </div>
                 <div class="form-control">
                     <input type="text" name="eligibility_cgpa" required>
                     <label>Eligible CGPA</label>
@@ -39,7 +47,13 @@
                     <input type="text" name="eligibility_backlogs" required>
                     <label>Eligible Backlogs</label>
                 </div>
-                <button type="submit" name="add_company">Add Company</button>
+                </div>
+                </div>
+                <div class="form-control">
+                    <label class="textarea_lable">Description</label><br>
+                    <textarea id="companyDescription" name="companyDescription"></textarea>
+                </div>
+            <button type="submit" name="add_company">Add Company</button>
             </form>
         </div>
     </div>

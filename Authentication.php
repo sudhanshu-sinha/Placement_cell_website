@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($_SESSION['is_admin'] == 1) {
                 header("Location: admin.php"); 
             } else {
-                header("Location: faq.php"); 
+                header("Location: user.php"); 
             }
             exit(); 
         }

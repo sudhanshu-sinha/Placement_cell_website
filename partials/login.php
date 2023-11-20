@@ -1,5 +1,3 @@
-
-
 <div id="loginPopup" class="popup">
     <div class="form-wrapper">
         <span class="close" id="closeButton">&times;</span>

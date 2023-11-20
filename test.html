@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | Chandigarh University</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="icon" type="image/png" href="img/favicon_io/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&family=Delicious+Handrawn&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kanit&family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tillana:wght@400;500;600;700;800&family=Work+Sans:ital,wght@0,500;0,600;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.tiny.cloud/1/ceiy0f4isn56x7175wq9bxyipr6hb2ej0nt6mvmoy5yrpyz0/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        .notification {
+            background: #ffffff;
+            box-shadow: -2px 0 4px #86a0bf45;
+            width: 100%;
+            max-width: 350px;
+            z-index: 999;
+            height: 100vh;
+            top: 0;
+            right: 0;
+            position: fixed;
+        }
+        
+        .notification.visible {
+            display: block;
+        }
+        
+        .notify_head {
+            padding: 8px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 22px;
+            text-align: center;
+            color: #1c4980;
+            border-bottom: 1px solid #dde5ea;
+            height: 53px;
+        }
+        
+        .notification-close {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .notification-close i {
+            font-size: 22px;
+        }
+        
+        .notify_body {
+            position: relative;
+            height: 100vh;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+        
+        .notify_body_content {
+            margin: 0 15px;
+            min-height: calc(100vh - 150px);
+            padding-bottom: 130px;
+        }
+        
+        .notify_body_content_box {
+            overflow: hidden;
+        }
+        
+        .notification_box {
+            padding: 15px 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+            border-bottom: 1px solid #dde5ea;
+            min-height: 65px;
+        }
+        
+        .notify_logo {
+            height: 50px;
+            width: 50px;
+            float: left;
+            position: relative;
+        }
+        
+        .notify_content_company {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 10px;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 16px;
+        }
+        
+        .notify_content_position {
+            max-height: 35px;
+            overflow: hidden;
+            transition: .5s;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            color: #1c4980;
+        }
+        
+        .notify_content_name {
+            margin: 3px 0 0;
+            font-size: 12px;
+            line-height: 15px;
+            color: #1c4980d9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="notification">
+        <div class="notify_head">
+            <p> Notifications </p>
+            <div class="notification-close">
+                <i class="bx bxs-x-circle icons"></i>
+            </div>
+        </div>
+        <div class="notify_body">
+            <div class="notify_body_content">
+                <div class="notify_body_content_box">
+                    <div class="notification_box">
+                        <div class="notify_logo">
+                        </div>
+                        <div class="notify_content_company">
+                            <div class="notify_content_position">
+                                hello
+                            </div>
+                            <div class="notify_content_name">
+                                friends
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

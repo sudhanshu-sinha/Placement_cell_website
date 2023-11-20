@@ -301,21 +301,9 @@
 .scrollable {
     position: sticky;
     width: 100%;
-    max-height: calc(100vh - 155px);
+    max-height: calc(100vh - 180px);
     overflow-y: scroll;
     border: 1px solid;
-}
-
-.add_comp {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin: 18px;
-    border-radius: 4px;
-    padding: 10px;
-    background: #ffffff;
-    box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
-    z-index: 1001;
 }
 
 .comp_row {
@@ -396,24 +384,35 @@
     margin: 3px;
 }
 
-.time {
+.review {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 5px;
 }
 
-.time p {
-    font-size: 12px;
+.review p {
+    font-size: 13px;
     font-weight: 500;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.review p.approved {
+    background: rgb(75, 181, 67);
+    color: #ffffff;
+}
+
+.review p.rejected {
+    background: red;
+    color: #ffffff;
 }
 
 .comp_title button {
-    margin: 2px 5px;
-    padding: 8px 0;
-    width: 10%;
+    margin: 2px 0px;
+    padding: 8px 12px;
+    width: 100%;
+    background: #ffc107;
+    color: #212529;
 }
 
 button {
@@ -429,6 +428,10 @@ button {
     margin: 25px 0 10px;
     cursor: pointer;
     transition: 0.1s ease;
+}
+
+.form button {
+    margin-top: 300px;
 }
 
 .add button {
@@ -502,6 +505,23 @@ button {
 
 .form {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.form_row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.form_column {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
@@ -518,21 +538,148 @@ button {
     z-index: 1000;
 }
 
+.form_wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 4px;
+    padding: 50px;
+    width: 80%;
+    height: 90%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    z-index: 1001;
+    overflow-y: scroll;
+}
+
+.form-control input {
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 4px;
+    color: #333;
+    font-size: 1rem;
+    padding: 0 20px;
+}
+
+.form-control input:is(:focus,
+ :valid) {
+    background: #fff;
+    padding: 16px 20px 0;
+}
+
+.form-control label {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    pointer-events: none;
+    color: #8c8c8c;
+    transition: all 0.1s ease;
+}
+
+.form-control input:is(:focus,
+ :valid)~label {
+    font-size: 0.75rem;
+    transform: translateY(-130%);
+}
+
+.form-wrapper :where(label) {
+    color: #b3b3b3;
+}
+
+.textarea_lable {
+    margin-top: -30px;
+}
+
+form .form-control {
+    height: 50px;
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.add_stu {
+    flex-direction: row;
+    margin: 10px;
+}
+
+.add_stu button {
+    margin-top: 10px;
+}
+
+.add_stu div {
+    width: calc(50% - 10px);
+}
+
+.add_stu div:nth-child(1) {
+    width: calc(100% - 10px);
+}
+
 .close {
     position: absolute;
     top: 0px;
     right: 15px;
-    font-size: 44px;
+    font-size: 34px;
     color: #e50914;
     cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    position: absolute;
+    background-color: #fefefe;
+    margin: 5% 15%;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    width: 70%;
+    height: 80%;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.review_close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.review_close:hover,
+.review_close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (max-width: 740px) {
+    .form-wrapper {
+        width: 100%;
+        top: 43%;
+    }
+    .form-wrapper form {
+        margin: 25px 0 40px;
+    }
 }
 
 @media (max-width: 913px) {
     .row {
         flex-direction: column;
-    }
-    .time {
-        flex-direction: row;
     }
     .student_container {
         flex-direction: column;
