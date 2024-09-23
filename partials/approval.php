@@ -139,8 +139,8 @@ function sendEmailToStudent($userId, $message) {
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'sudhanshu.cu@gmail.com';
-        $mail->Password   = 'vegv caxj pltm uoug';
+        $mail->Username   = 'xyz@gmail.com';
+        $mail->Password   = 'vsegv scaxj psltm uosug';
         $mail->SMTPSecure = 'ssl';
         $mail->Port = 465;
 
